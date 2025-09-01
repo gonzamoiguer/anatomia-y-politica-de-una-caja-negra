@@ -1,257 +1,330 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-		<title>Anatomía y política de una caja negra</title>
+    <title>Anatomía y política de una caja negra</title>
 
-		<meta name="description" content="Clase dictada en 2025 en Diseño de Imagen y Sonido, centrada en la disección y problemáticas de la computación">
-		<meta name="author" content="Gonzalo Moiguer">
+    <meta name="description"
+        content="Clase dictada en 2025 en Diseño de Imagen y Sonido, centrada en la disección y problemáticas de la computación">
+    <meta name="author" content="Gonzalo Moiguer">
 
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
 
-	<body>
+<body>
 
-		<div class="reveal">
+    <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h5>Anatomía y política de una caja negra</h5>
-				</section>
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h5>Anatomía y política de una caja negra</h5>
+            </section>
 
-                <section>
-					<p>¿Qué es computar?</p>
-				</section>
-                
-
-                <section data-background-image="/assets/Leibniz.jpg" data-background-size="cover" data-background-repeat="no-repeat" data-background-position="top">
-                    <p>Cuando surjan disputas, no habrá necesidad de debatir más; simplemente digamos: calculemos.</p>
-                    <br>
-                    Gottfried Wilhelm Leibniz (1646 - 1716)
-                </section>
-
-                <section data-background-image="/assets/Lovelace.jpg" data-background-size="cover" data-background-repeat="no-repeat" data-background-position="top">
-                    <p>La máquina analítica no tiene pretensiones de originar nada. Puede hacer lo que sepamos ordenarle que ejecute… pero puede seguir análisis, y hacerlo para cantidades más allá del número.</p>
-                    <br>Ada Lovelace, 1843
-                </section>
-
-                <section>
-					<p>Computar es recorrer un laberinto que tiene una única solución.</p>
-                    <p> Programar es diseñar un laberinto que muta de tal manera que ciertas entradas corresponden con salidas específicas.</p>
-				</section>
+            <section>
+                <p>¿Qué es computar?</p>
+            </section>
 
 
+            <section data-background-image="/assets/Leibniz.jpg" data-background-size="cover"
+                data-background-repeat="no-repeat" data-background-position="top">
+                <p>Cuando surjan disputas, no habrá necesidad de debatir más; simplemente digamos: calculemos.</p>
+                <br>
+                Gottfried Wilhelm Leibniz (1646 - 1716)
+            </section>
 
-                <section>
-					<p>electrónica</p>
-				</section>
+            <section data-background-image="/assets/Lovelace.jpg" data-background-size="cover"
+                data-background-repeat="no-repeat" data-background-position="top">
+                <p>La máquina analítica no tiene pretensiones de originar nada. Puede hacer lo que sepamos ordenarle que
+                    ejecute… pero puede seguir análisis, y hacerlo para cantidades más allá del número.</p>
+                <br>Ada Lovelace, 1843
+            </section>
 
-                <section>
-                    <img src="/assets/gates/circuit.png"/>
-                </section>
+            <section>
+                <p>Computar es recorrer un laberinto que tiene una única solución.</p>
+                <p> Programar es diseñar un laberinto que muta de tal manera que ciertas entradas corresponden con
+                    salidas específicas.</p>
+            </section>
 
-                <section>
-                    <img src="/assets/gates/switch.png"/>
-                </section>
 
-                 <section>
-                    <img src="/assets/gates/switch on.png"/>
-                </section>
 
-                <section>
-                    <img src="/assets/gates/AND gate.png"/>
-                </section>
+            <section>
+                <p>el principio</p>
+            </section>
 
-                <section>
-                    <img src="/assets/gates/AND gate-1.png"/>
-                </section>
+            <section>
+                <img src="/assets/gates/circuit.png" />
+            </section>
 
-                <section>
-                    <img src="/assets/gates/AND gate on.png"/>
-                </section>
+            <section>
+                <img src="/assets/gates/switch.png" />
+            </section>
 
-                <section>
-                    <img src="/assets/gates/OR gate off.png"/>
-                </section>
+            <section>
+                <img src="/assets/gates/switch on.png" />
+            </section>
 
-                <section>
-                    <img src="/assets/gates/OR gate on.png"/>
-                </section>
+            <section>
+                <img src="/assets/gates/AND gate.png" />
+            </section>
 
-                <section>
-                    <img src="/assets/gates/OR gate on 2.png"/>
-                </section>
+            <section>
+                <img src="/assets/gates/AND gate-1.png" />
+            </section>
 
-                <section>
+            <section>
+                <img src="/assets/gates/AND gate on.png" />
+            </section>
+
+            <section>
+                <img src="/assets/gates/OR gate off.png" />
+            </section>
+
+            <section>
+                <img src="/assets/gates/OR gate on.png" />
+            </section>
+
+            <section>
+                <img src="/assets/gates/OR gate on 2.png" />
+            </section>
+
+            <section>
+                <div class="r-hstack justify-center">
+                    <div>
+                        <h5>OR</h5>
+                        <p style="font-size: small;">Conexión en paralelo</p>
+                        <p style="font-size: small;">Cierra el circuito cuando <strong>cualquiera</strong> de sus
+                            entradas es verdadera</p>
+                        <img src="/assets/gates/OR gate on.png" />
+                        <table style="font-size: small;">
+                            <thead>
+                                <tr>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>Resultado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>F</td>
+                                    <td>F</td>
+                                    <td>F</td>
+                                </tr>
+                                <tr>
+                                    <td>F</td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                </tr>
+                                <tr>
+                                    <td>V</td>
+                                    <td>F</td>
+                                    <td>V</td>
+                                </tr>
+                                <tr>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div>
+                        <h5>AND</h5>
+                        <p style="font-size: small;">Conexión en serie</p>
+                        <p style="font-size: small;">Cierra el circuito cuando <strong>ambas</strong> entradas son
+                            verdaderas</p>
+                        <img src="/assets/gates/AND gate on.png" />
+                        <table style="font-size: small;">
+                            <thead>
+                                <tr>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>Resultado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>F</td>
+                                    <td>F</td>
+                                    <td>F</td>
+                                </tr>
+                                <tr>
+                                    <td>F</td>
+                                    <td>V</td>
+                                    <td>F</td>
+                                </tr>
+                                <tr>
+                                    <td>V</td>
+                                    <td>F</td>
+                                    <td>F</td>
+                                </tr>
+                                <tr>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <h5>NOT</h5>
+                    <p style="font-size: small;">Invierte la señal</p>
+                    <p style="font-size: small;">Cierra el circuito cuando su entrada es falsa</p>
                     <div class="r-hstack justify-center">
-						<div>
-                            <h5>OR</h5>
-                            <p style="font-size: small;">Conexión en paralelo</p>
-                            <p style="font-size: small;">Cierra el circuito cuando <strong>cualquiera</strong> de sus entradas es verdadera</p>
-                            <img src="/assets/gates/OR gate on.png"/>
-                            <table style="font-size: small;">
-                                <thead>
-                                    <tr>
-                                        <th>A</th>
-                                        <th>B</th>
-                                        <th>Resultado</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>F</td>
-                                        <td>F</td>
-                                        <td>F</td>
-                                    </tr>
-                                    <tr>
-                                        <td>F</td>
-                                        <td>V</td>
-                                        <td>V</td>
-                                    </tr>
-                                    <tr>
-                                        <td>V</td>
-                                        <td>F</td>
-                                        <td>V</td>
-                                    </tr>
-                                    <tr>
-                                        <td>V</td>
-                                        <td>V</td>
-                                        <td>V</td>
-                                    </tr>
-                                    
-                                </tbody>
-                            </table>
-                        </div>
-                        
-                        <div><h5>AND</h5>
-                            <p style="font-size: small;">Conexión en serie</p>
-                            <p style="font-size: small;">Cierra el circuito cuando <strong>ambas</strong> entradas son verdaderas</p>
-                            <img src="/assets/gates/AND gate on.png"/>
-                            <table style="font-size: small;">
-                                <thead>
-                                    <tr>
-                                        <th>A</th>
-                                        <th>B</th>
-                                        <th>Resultado</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>F</td>
-                                        <td>F</td>
-                                        <td>F</td>
-                                    </tr>
-                                    <tr>
-                                        <td>F</td>
-                                        <td>V</td>
-                                        <td>F</td>
-                                    </tr>
-                                    <tr>
-                                        <td>V</td>
-                                        <td>F</td>
-                                        <td>F</td>
-                                    </tr>
-                                    <tr>
-                                        <td>V</td>
-                                        <td>V</td>
-                                        <td>V</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-					</div>
-                </section>
+                        <img src="/assets/gates/not gate.png" />
+                        <p> &nbsp; </p>
+                        <img src="/assets/gates/not gate closed.png" />
+                    </div>
+                    <table style="font-size: small;">
+                        <thead>
+                            <tr>
+                                <th>A</th>
+                                <th>Resultado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>V</td>
+                                <td>F</td>
+                            </tr>
+                            <tr>
+                                <td>F</td>
+                                <td>V</td>
+                            </tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-                <section>
-						<div>
-                            <h5>NOT</h5>
-                            <p style="font-size: small;">Invierte la señal</p>
-                            <p style="font-size: small;">Cierra el circuit cuando su entrada es falsa</p>
-                            <div class="r-hstack justify-center">
+            <section>
+                <img style="height: 500px;" src="/assets/gates/code hidden language.jpg" />
+            </section>
 
-                                <img src="/assets/gates/not gate.png"/>
-                                <p> &nbsp; </p>
-                                <img src="/assets/gates/not gate closed.png"/>
-                            </div>
-                            <table style="font-size: small;">
-                                <thead>
-                                    <tr>
-                                        <th>A</th>
-                                        <th>Resultado</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>V</td>
-                                        <td>F</td>
-                                    </tr>
-                                    <tr>
-                                        <td>F</td>
-                                        <td>V</td>
-                                    </tr>
-                                    </tr>                                    
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
+            <section>
+                <p>"Quiero un gato macho, castrado, blanco o beige;</p>
+                <p class="fragment">o una gata hembra, castrada, de cualquier color excepto blanco;</p>
+                <p class="fragment">o aceptaré cualquier gato que tengas siempre que sea negro."</p>
 
-				
+                <div class="r-hstack justify-center">
+                    <div>
+                        <table style="font-size: small; margin-right: 100px;" class="fragment">
+                            <thead>
+                                <tr>
+                                    <th>Variable</th>
+                                    <th>Significado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>M</td>
+                                    <td>Macho (Male)</td>
+                                </tr>
+                                <tr>
+                                    <td>F</td>
+                                    <td>Hembra (Female)</td>
+                                </tr>
+                                <tr>
+                                    <td>N</td>
+                                    <td>Castrado (neutered)</td>
+                                </tr>
+                                <tr>
+                                    <td>W</td>
+                                    <td>Blanco (white)</td>
+                                </tr>
+                                <tr>
+                                    <td>T</td>
+                                    <td>Beige (tan)</td>
+                                </tr>
+                                <tr>
+                                    <td>B</td>
+                                    <td>Negro (black)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="width: 100px;"></div>
+                    </div>
+                    <div>
+                        <p class="fragment" style="font-size:medium;"><strong>M</strong> AND <strong>N</strong> AND (<strong>W</strong> OR <strong>T</strong>)</p>
+                        <p class="fragment" style="font-size:medium;">OR <strong>F</strong> AND <strong>N</strong> AND !<strong>W</strong></p>
+                        <p class="fragment" style="font-size:medium;">OR <strong>B</strong></p>
+                    </div>
+                </div>
+            </section>
 
-			</div>
+            <section>
+                (<strong>M</strong> AND <strong>N</strong> AND (<strong>W</strong> OR <strong>T</strong>))
+                OR (<strong>F</strong> AND <strong>N</strong> AND !<strong>W</strong>)
+                OR <strong>B</strong>
+            </section>
 
-		</div>
+            <section>
+                <img src="/assets//gates/maquina gatos.png"/>
+            </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/zoom/zoom.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/search/search.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
+        </div>
+    </div>
 
-			// Also available as an ES module, see:
-			// https://revealjs.com/initialization/
-			Reveal.initialize({
-				hash: true,
-                transition: 'none',
-                controlsTutorial: false,
-                controls: false,
-                // Learn about plugins: https://revealjs.com/plugins/
-                plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
-			});
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/search/search.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
 
-		</script>
+        // Also available as an ES module, see:
+        // https://revealjs.com/initialization/
+        Reveal.initialize({
+            hash: true,
+            transition: 'none',
+            controlsTutorial: false,
+            controls: false,
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
 
-        <style>
-            .reveal small {
-                display: block;
-            }
-            .reveal .progress{
-                color:#dddddd;
-            }
-            ul{
-                width: 100%;
-            }
-            li{
-                font-size: 1.5rem;
-            }
-            section{
-                text-shadow: 1px 1px 2px #000000d7;
-            }
+    </script>
 
-        </style>
-	</body>
+    <style>
+        .reveal small {
+            display: block;
+        }
+
+        .reveal .progress {
+            color: #dddddd;
+        }
+
+        ul {
+            width: 100%;
+        }
+
+        li {
+            font-size: 1.5rem;
+        }
+
+        section {
+            text-shadow: 1px 1px 2px #000000d7;
+        }
+    </style>
+</body>
+
 </html>
