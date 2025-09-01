@@ -30,8 +30,183 @@
 			<div class="slides">
 				<section>
 					<h5>Anatomía y política de una caja negra</h5>
-					
 				</section>
+
+                <section>
+					<p>¿Qué es computar?</p>
+				</section>
+                
+
+                <section data-background-image="/assets/Leibniz.jpg" data-background-size="cover" data-background-repeat="no-repeat" data-background-position="top">
+                    <p>Cuando surjan disputas, no habrá necesidad de debatir más; simplemente digamos: calculemos.</p>
+                    <br>
+                    Gottfried Wilhelm Leibniz (1646 - 1716)
+                </section>
+
+                <section data-background-image="/assets/Lovelace.jpg" data-background-size="cover" data-background-repeat="no-repeat" data-background-position="top">
+                    <p>La máquina analítica no tiene pretensiones de originar nada. Puede hacer lo que sepamos ordenarle que ejecute… pero puede seguir análisis, y hacerlo para cantidades más allá del número.</p>
+                    <br>Ada Lovelace, 1843
+                </section>
+
+                <section>
+					<p>Computar es recorrer un laberinto que tiene una única solución.</p>
+                    <p> Programar es diseñar un laberinto que muta de tal manera que ciertas entradas corresponden con salidas específicas.</p>
+				</section>
+
+
+
+                <section>
+					<p>electrónica</p>
+				</section>
+
+                <section>
+                    <img src="/assets/gates/circuit.png"/>
+                </section>
+
+                <section>
+                    <img src="/assets/gates/switch.png"/>
+                </section>
+
+                 <section>
+                    <img src="/assets/gates/switch on.png"/>
+                </section>
+
+                <section>
+                    <img src="/assets/gates/AND gate.png"/>
+                </section>
+
+                <section>
+                    <img src="/assets/gates/AND gate-1.png"/>
+                </section>
+
+                <section>
+                    <img src="/assets/gates/AND gate on.png"/>
+                </section>
+
+                <section>
+                    <img src="/assets/gates/OR gate off.png"/>
+                </section>
+
+                <section>
+                    <img src="/assets/gates/OR gate on.png"/>
+                </section>
+
+                <section>
+                    <img src="/assets/gates/OR gate on 2.png"/>
+                </section>
+
+                <section>
+                    <div class="r-hstack justify-center">
+						<div>
+                            <h5>OR</h5>
+                            <p style="font-size: small;">Conexión en paralelo</p>
+                            <p style="font-size: small;">Cierra el circuito cuando <strong>cualquiera</strong> de sus entradas es verdadera</p>
+                            <img src="/assets/gates/OR gate on.png"/>
+                            <table style="font-size: small;">
+                                <thead>
+                                    <tr>
+                                        <th>A</th>
+                                        <th>B</th>
+                                        <th>Resultado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>F</td>
+                                        <td>F</td>
+                                        <td>F</td>
+                                    </tr>
+                                    <tr>
+                                        <td>F</td>
+                                        <td>V</td>
+                                        <td>V</td>
+                                    </tr>
+                                    <tr>
+                                        <td>V</td>
+                                        <td>F</td>
+                                        <td>V</td>
+                                    </tr>
+                                    <tr>
+                                        <td>V</td>
+                                        <td>V</td>
+                                        <td>V</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div><h5>AND</h5>
+                            <p style="font-size: small;">Conexión en serie</p>
+                            <p style="font-size: small;">Cierra el circuito cuando <strong>ambas</strong> entradas son verdaderas</p>
+                            <img src="/assets/gates/AND gate on.png"/>
+                            <table style="font-size: small;">
+                                <thead>
+                                    <tr>
+                                        <th>A</th>
+                                        <th>B</th>
+                                        <th>Resultado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>F</td>
+                                        <td>F</td>
+                                        <td>F</td>
+                                    </tr>
+                                    <tr>
+                                        <td>F</td>
+                                        <td>V</td>
+                                        <td>F</td>
+                                    </tr>
+                                    <tr>
+                                        <td>V</td>
+                                        <td>F</td>
+                                        <td>F</td>
+                                    </tr>
+                                    <tr>
+                                        <td>V</td>
+                                        <td>V</td>
+                                        <td>V</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+					</div>
+                </section>
+
+                <section>
+						<div>
+                            <h5>NOT</h5>
+                            <p style="font-size: small;">Invierte la señal</p>
+                            <p style="font-size: small;">Cierra el circuit cuando su entrada es falsa</p>
+                            <div class="r-hstack justify-center">
+
+                                <img src="/assets/gates/not gate.png"/>
+                                <p> &nbsp; </p>
+                                <img src="/assets/gates/not gate closed.png"/>
+                            </div>
+                            <table style="font-size: small;">
+                                <thead>
+                                    <tr>
+                                        <th>A</th>
+                                        <th>Resultado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>V</td>
+                                        <td>F</td>
+                                    </tr>
+                                    <tr>
+                                        <td>F</td>
+                                        <td>V</td>
+                                    </tr>
+                                    </tr>                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
 
 				
 
@@ -72,6 +247,9 @@
             }
             li{
                 font-size: 1.5rem;
+            }
+            section{
+                text-shadow: 1px 1px 2px #000000d7;
             }
 
         </style>
